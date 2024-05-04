@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>__all_playlists</key>
+	<true/>
+	<key>__automatic_refresh_library_interval</key>
+	<string>120</string>
+	<key>__country_code</key>
+	<string>HK</string>
+	<key>__display_name</key>
+	<string>kefhuang</string>
+	<key>__fuzzy_search</key>
+	<true/>
+	<key>__oauth_access_token</key>
+	<string>BQADHLk5jp65tk7aA1EpCHtEwG9JuoYzBfdf9BfJyjf_7IUN47oXnm5czvfYNFzGXXXRAlH-W026Gg8NTC_hfAVFD8QG_pHSroGBspPSGTFwOVArq5BGyZsbAi81CAYH50mGuIfLC8epfHSwvY_XqS4Dq7_UItdprh5H7C34QwQ7GwJwoC3RQeQOwf57hVT--Whq7k8E46NTh4EoHAjHTexaE080K1e5Zs6zWqqbhox3VHSqmLqpx6CHlEwCNB-aytXFSEpYZrctlh4hTDVsvbvSEcm7jDD2YfNf719ee_BFTo3Zugho6yrKmUd92zeamHbDKYQ-pg</string>
+	<key>__oauth_client_id</key>
+	<string>e506eb5e145944ed9d5f2aabef5a284b</string>
+	<key>__oauth_client_secret</key>
+	<string>fba4e3b06d064b908314250aa2190cf0</string>
+	<key>__oauth_refresh_token</key>
+	<string>AQDRB-GyrqhbpnN234xPAZa-Yohfyh604wKjurvnjhIej97PtU3N6iKZ4_kvNKF_Jng07o3FD3CYr8BKVmsJW2xlW61_vqZ9TWD8mmnjrZmGfWiZT_OI1TUHbg48APbYXNA</string>
+	<key>__output_application</key>
+	<string>CONNECT</string>
+	<key>__podcasts_enabled</key>
+	<string>0</string>
+	<key>__preferred_spotify_connect_device</key>
+	<string>Kefeng’s MacBook Pro</string>
+	<key>__use_artworks</key>
+	<string>0</string>
+	<key>__userid</key>
+	<string>7r2qjc7knvfnpjgkzxpndg7g3</string>
+	<key>c_spot_mini</key>
+	<string>spot</string>
+	<key>menu_display_browse_by_album</key>
+	<false/>
+	<key>menu_display_browse_by_artist</key>
+	<false/>
+	<key>menu_display_browse_by_playlist</key>
+	<false/>
+	<key>menu_display_browse_by_show</key>
+	<false/>
+	<key>menu_display_browse_categories</key>
+	<false/>
+	<key>menu_display_browse_your_music</key>
+	<false/>
+	<key>menu_display_current_track</key>
+	<false/>
+	<key>menu_display_lookup_current_artist_online</key>
+	<false/>
+	<key>menu_display_search_online</key>
+	<false/>
+	<key>menu_display_your_recent_tracks</key>
+	<false/>
+	<key>menu_display_your_tops</key>
+	<false/>
+</dict>
+</plist>
