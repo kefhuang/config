@@ -122,10 +122,10 @@ bindkey '^y' autosuggest-accept
 # source local config in bash
 if [ -e ~/.bashrc ]
 then
-    source ~/.bashrc
+    bash -c "source ~/.bashrc"
 else
     if [ -e ~/.bash_profile ]
     then
-        source ~/.bash_profile
+        bash -c "source ~/.bash_profile"
     fi
 fi
