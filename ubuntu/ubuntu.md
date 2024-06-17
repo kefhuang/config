@@ -1,11 +1,12 @@
-# Mac Settings
-Last Modified: 21/05/2024
+# Ubuntu Mac Settings
+Last Modified: 17/06/2024
 
 ## System
 
 ### Map `CapsLock` to both `Ctrl` AND `Esc`:
 ```bash
-echo "setxkbmap -option 'caps:ctrl_modifier' && xcape -e 'Caps_Lock=Escape'" >> ~/.profile
+sudo apt install xcape
+echo "setxkbmap -option 'caps:ctrl_modifier' && xcape -e 'Caps_Lock=Escape'" >> ~/.bashrc
 ```
 
 ### 'Always' hide the dock:
@@ -17,7 +18,13 @@ gsettings set org.gnome.shell.extensions.dash-to-dock intellihide false
 
 ### Remove Desktop Icon
 ```bash
-gsettings set org.gnome.desktop.background show-desktop-icons false
+gsettings set org.gnome.shell.extensions.desktop-icons show-home false
+gsettings set org.gnome.shell.extensions.desktop-icons show-trash false
+```
+
+### Natural Scrolling
+```bash
+gsettings set org.gnome.desktop.peripherals.mouse natural-scroll true
 ```
 
 ### Chinese Input
@@ -34,7 +41,7 @@ Logout and login again
 
 Install `git`"
 ```bash
-brew install git
+sudo apt install git
 git config --global user.name "kefhuang"
 git config --global user.email "kefhuang@outlook.com"
 git config --global core.editor vim
@@ -56,18 +63,13 @@ Install `OhMyZsh`:
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-Install `Gnome Boxes`:
-```bash
-sudo snap install gnome-boxes
-```
-
 ## Zsh Customize
 
 ### Install Pulgins
 #### Powerlevel10k
 Install Fonts
 - [MesloLGS NF Regular.ttf](
-    https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttfk
+    https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf)
 - [MesloLGS NF Bold.ttf](
     https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf)
 - [MesloLGS NF Italic.ttf](
@@ -92,6 +94,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 ### Load configurations
 ```bash
+rm ~/.zshrc
 ln -s `pwd`/configs/zshrc ~/.zshrc
 ln -s `pwd`/configs/p10k ~/.p10k.zsh
 ln -s `pwd`/configs/vimrc ~/.vimrc
