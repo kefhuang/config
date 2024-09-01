@@ -136,4 +136,7 @@ Full Alfred Settings can be found [here](./alfred/Alfred.alfredpreferences/)
    ```
 2. Added some custome [websearch](./alfred/Alfred.alfredpreferences/preferences/features/websearch/prefs.plist)
 
-   
+
+## Other Softwares
+
+1. Mactex (tex live) recommanded by the latex workshop vscode extension
