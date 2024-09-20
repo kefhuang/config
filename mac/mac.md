@@ -140,3 +140,7 @@ Full Alfred Settings can be found [here](./alfred/Alfred.alfredpreferences/)
 ## Other Softwares
 
 1. Mactex (tex live) recommanded by the latex workshop vscode extension
+
+2. Darkmode (https://github.com/insidegui/DarkModeBuddy)
+
+3. MessAuto (https://github.com/LeeeSe/MessAuto)
