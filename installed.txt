@@ -1,0 +1,18 @@
+vim
+ca-certificates curl gnupg
+
+# nvidia docker
+https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html
+Failed to initialize NVML: Unknown Error
+https://stackoverflow.com/questions/72932940/failed-to-initialize-nvml-unknown-error-in-docker-after-few-hours
+ 
+# to use glxgears to test the opengl support
+mesa-utils
+
+# https://github.com/NVIDIA/nvidia-docker/issues/1155#issuecomment-884499204
+# nvidia rootless
+
+# git 
+# create ssh key
+# TOdo upload to github
+# git config
