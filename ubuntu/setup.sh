@@ -16,8 +16,12 @@ echo \
 "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
 $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
 sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-sudo usermod -aG docker $USER
+sudo apt update
+sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 sudo docker run hello-world
+sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker
 echo "----------------------------------------"
 echo "Docker has been installed. You may need to logout to enable rootless docker."
 echo "----------------------------------------"
