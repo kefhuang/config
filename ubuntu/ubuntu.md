@@ -1,11 +1,21 @@
-# Ubuntu Mac Settings
-Last Modified: 17/06/2024
+# Ubuntu Setup
+Last Modified: 29/11/2024
+
+## Automated Scripts
+
+```
+bash ubuntu/setup.sh
+```
 
 ## System
 
-### Map `CapsLock` to both `Ctrl` AND `Esc`:
+### Modify Keyboard
+Install `xcape`
 ```bash
 sudo apt install xcape
+```
+
+```
 echo "setxkbmap -option 'caps:ctrl_modifier' && xcape -e 'Caps_Lock=Escape'" >> ~/.bashrc
 ```
 
@@ -99,3 +109,6 @@ ln -s `pwd`/configs/zshrc ~/.zshrc
 ln -s `pwd`/configs/p10k ~/.p10k.zsh
 ln -s `pwd`/configs/vimrc ~/.vimrc
 ```
+
+## Software Install
+
