@@ -19,13 +19,8 @@ sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt update
 sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 sudo docker run hello-world
-if ! getent group docker > /dev/null; then
-	sudo groupadd docker
-fi
-sudo usermod -aG docker $USER
-newgrp docker
 echo "----------------------------------------"
-echo "Docker has been installed. You may need to logout to enable rootless docker."
+echo "Docker has been installed." 
 echo "----------------------------------------"
 
 # Install Nvidia Container Toolkit
@@ -38,8 +33,6 @@ sudo apt-get install -y nvidia-container-toolkit
 sudo nvidia-ctk runtime configure --runtime=docker
 sudo systemctl restart docker
 nvidia-ctk runtime configure --runtime=docker --config=$HOME/.config/docker/daemon.json
-systemctl --user restart docker
-sudo nvidia-ctk config --set nvidia-container-cli.no-cgroups --in-place
 echo "----------------------------------------"
 echo "Nvidia Container Toolkit has been installed."
 echo "----------------------------------------"
@@ -58,7 +51,11 @@ wget -O "$HOME/Downloads/MesloLGS NF Bold.ttf" https://github.com/romkatv/powerl
 wget -O "$HOME/Downloads/MesloLGS NF Italic.ttf" https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf
 wget -O "$HOME/Downloads/MesloLGS NF Bold Italic.ttf" https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf
 sudo mkdir -p /usr/share/fonts/truetype/MesloLGS
-sudo mv *.ttf /usr/share/fonts/truetype/MesloLGS/.
+sudo mv "$HOME/Downloads/MesloLGS NF Regular.ttf" /usr/share/fonts/truetype/MesloLGS/MesloLGS\ NF\ Regular.ttf
+sudo mv "$HOME/Downloads/MesloLGS NF Bold.ttf" /usr/share/fonts/truetype/MesloLGS/MesloLGS\ NF\ Bold.ttf
+sudo mv "$HOME/Downloads/MesloLGS NF Italic.ttf" /usr/share/fonts/truetype/MesloLGS/MesloLGS\ NF\ Italic.ttf
+sudo mv "$HOME/Downloads/MesloLGS NF Bold Italic.ttf" /usr/share/fonts/truetype/MesloLGS/MesloLGS\ NF\ Bold\ Italic.ttf
+fc-cache -f -v
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
