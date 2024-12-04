@@ -20,9 +20,9 @@ plugins=(
         zsh-syntax-highlighting
         zsh-autosuggestions
 )
-bindkey '^y' autosuggest-accept # zsh-autosuggestions
 
 source $ZSH/oh-my-zsh.sh
+bindkey '^y' autosuggest-accept # zsh-autosuggestions
 
 #####################
 # powerlevel10k setup
