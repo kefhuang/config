@@ -118,3 +118,14 @@ ln -s `pwd`/configs/vimrc ~/.vimrc
 ```
 sudo apt install gnome-tweaks gnome-shell-extensions
 ```
+
+save gtile config
+```
+dconf dump /org/gnome/shell/extensions/gtile/ > my-custom-gtile-configs.conf
+```
+
+
+load gtile config
+```
+dconf load /org/gnome/shell/extensions/gtile/ < my-custom-gtile-configs.conf
+```
