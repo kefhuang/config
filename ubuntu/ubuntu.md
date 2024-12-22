@@ -112,3 +112,9 @@ ln -s `pwd`/configs/vimrc ~/.vimrc
 
 ## Software Install
 
+
+# Windows Management
+
+```
+sudo apt install gnome-tweaks gnome-shell-extensions
+```

@@ -18,12 +18,10 @@ $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
 sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt update
 sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-sudo docker run hello-world
 if ! getent group docker > /dev/null; then
 	sudo groupadd docker
 fi
 sudo usermod -aG docker $USER
-newgrp docker
 echo "----------------------------------------"
 echo "Docker has been installed. You may need to logout to enable rootless docker."
 echo "----------------------------------------"
@@ -38,7 +36,6 @@ sudo apt-get install -y nvidia-container-toolkit
 sudo nvidia-ctk runtime configure --runtime=docker
 sudo systemctl restart docker
 nvidia-ctk runtime configure --runtime=docker --config=$HOME/.config/docker/daemon.json
-systemctl --user restart docker
 sudo nvidia-ctk config --set nvidia-container-cli.no-cgroups --in-place
 echo "----------------------------------------"
 echo "Nvidia Container Toolkit has been installed."
