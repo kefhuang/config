@@ -161,9 +161,35 @@ gsettings set org.gnome.desktop.peripherals.mouse natural-scroll true
 
 ### Chinese Input
 ```bash
-sudo apt install fcitx-bin
-sudo apt install fcitx-googlepinyin fcitx-table
+sudo apt install fcitx5
+sudo apt install fcitx5-chinese-addons
+sudo apt install fcitx5-frontend-gtk4 fcitx5-frontend-gtk3 fcitx5-frontend-gtk2 fcitx5-frontend-qt5
 ```
+
+Download chinese dict
+```bash
+wget https://github.com/felixonmars/fcitx5-pinyin-zhwiki/releases/download/0.2.5/zhwiki-20240909.dict
+mkdir -p  ~/.local/share/fcitx5/pinyin/dictionaries/
+mv zhwiki-20240909.dict  ~/.local/share/fcitx5/pinyin/dictionaries/
+```
+
+Change Input Method to fcitx5
+```bash
+im-confg
+```
+
+Change `/etc/profile`
+```bash
+export XMODIFIERS=@im=fcitx
+export GTK_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+```
+
+remove ibus
+```
+sudo apt remove ibus
+```
+
 Then go to settings -> Region & Language -> Manage Installed Languages ->
 Keyboard Input method system -> fcitx
 
