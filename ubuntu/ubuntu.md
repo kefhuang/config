@@ -64,9 +64,9 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 # Import Configs
 mkdir ~/Apps
 cd ~/Apps
-git clone git@github.com:kefhuang/SystemConfig.git
+git clone https://github.com/kefhuang/SystemConfigs.git
 
-cd ~/Apps/SystemConfig
+cd ~/Apps/SystemConfigs
 if [ -f "$HOME/.zshrc" ]; then
 	rm "$HOME/.zshrc"
 fi
