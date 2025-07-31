@@ -32,4 +32,4 @@ bindkey '^y' autosuggest-accept # zsh-autosuggestions
 ##########
 # WezTerm
 ##########
-XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CONFIG_HOME="$HOME/.config"
