@@ -1,6 +1,9 @@
 # .config
 
-## ZSH
+
+## Shell Setup
+
+### ZSH
 ```
 echo 'if [ -f ~/.zshrc.common ]; then
     source ~/.zshrc.common
@@ -14,3 +17,5 @@ fi' >> .zshrc
 to home or home/.config
 
 2. link wezterm.lua to XDG_CONFIG_HOME/wezterm/wezterm.lua
+
+https://alexplescan.com/posts/2024/08/10/wezterm/

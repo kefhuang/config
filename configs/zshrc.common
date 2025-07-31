@@ -28,3 +28,8 @@ bindkey '^y' autosuggest-accept # zsh-autosuggestions
 # powerlevel10k setup
 #####################
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+
+##########
+# WezTerm
+##########
+XDG_CONFIG_HOME="$HOME/.config"
