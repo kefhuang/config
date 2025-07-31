@@ -1,7 +1,0 @@
-# Source common zshrc configurations
-if [ -f ~/.zshrc.common ]; then
-    source ~/.zshrc.common
-fi
-if [ -f ~/.zshrc.local ]; then
-    source ~/.zshrc.local
-fi
